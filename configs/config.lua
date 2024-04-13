@@ -10,19 +10,19 @@ function L(cd) if Locales[Config.Language][cd] then return Locales[Config.Langua
 --╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 
 
-Config.Framework = 'esx' ---[ 'esx' / 'qbcore' / 'vrp' / 'aceperms' / 'identifiers', 'other' ] Choose your framework (by framework we mean choose the permission system you want to use).
+Config.Framework = 'qbcore' ---[ 'esx' / 'qbcore' / 'vrp' / 'aceperms' / 'identifiers', 'other' ] Choose your framework (by framework we mean choose the permission system you want to use).
 Config.Language = 'EN' --[ 'EN' / 'FR' / 'ES' ] You can add your own locales to the Locales.lua. But make sure to add it here.
 
 Config.FrameworkTriggers = { --You can change the esx/qbcore events (IF NEEDED).
-    main = 'esx:getSharedObject',   --ESX = 'esx:getSharedObject'   QBCORE = 'QBCore:GetObject'
-    load = 'esx:playerLoaded',      --ESX = 'esx:playerLoaded'      QBCORE = 'QBCore:Client:OnPlayerLoaded'
-    job = 'esx:setJob',             --ESX = 'esx:setJob'            QBCORE = 'QBCore:Client:OnJobUpdate'
-    resource_name = 'es_extended'   --ESX = 'es_extended'           QBCORE = 'qb-core'
+    main = 'QBCore:GetObject',   --ESX = 'esx:getSharedObject'   QBCORE = 'QBCore:GetObject'
+    load = 'QBCore:Client:OnPlayerLoaded',      --ESX = 'esx:playerLoaded'      QBCORE = 'QBCore:Client:OnPlayerLoaded'
+    job = 'QBCore:Client:OnJobUpdate',             --ESX = 'esx:setJob'            QBCORE = 'QBCore:Client:OnJobUpdate'
+    resource_name = 'qb-core'   --ESX = 'es_extended'           QBCORE = 'qb-core'
 }
 
 Config.NotificationType = { --[ 'esx' / 'qbcore' / 'mythic_old' / 'mythic_new' / 'chat' / 'other' ] Choose your notification script.
-    server = 'esx',
-    client = 'esx' 
+    server = 'qbcore',
+    client = 'qbcore' 
 }
 
 Config.Command = {
@@ -47,7 +47,7 @@ Config.Command = {
 --╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 
 Config.TsunamiWarning = true --Do you want to enable the tsunami warning countdown just before a server restart?
-Config.TsunamiWarning_time = 2 --(in minutes) How long the tsunami warning should last. Read the docs for more info.
+Config.TsunamiWarning_time = 5 --(in minutes) How long the tsunami warning should last. Read the docs for more info.
 
 Config.TimeCycleSpeed = 2 --(in seconds) Changing this value will effects the day/night time cycle, decreasing slows it down, incresing speeds it up. Right now its similar to the default gta5 time cycle.
 Config.DynamicWeather_time = 10 --(in minutes) If dynamic weather is enabled, this value is how long until the weather changes.
